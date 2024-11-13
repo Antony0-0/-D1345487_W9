@@ -5,10 +5,10 @@ def recommend_videos():
         data = input().split()
         name = data[0] 
         viewers = int(data[1]) 
-        avg_watch_time = int(data[2]) 
+        watch_time = int(data[2]) 
         video_length = int(data[3]) 
         relevance = int(data[4])
-        priority_index = viewers * avg_watch_time * video_length * relevance
+        priority_index = viewers * watch_time * video_length * relevance
         videos.append((name, priority_index))
     videos.sort(key=lambda x: x[1], reverse=True)
     for video in videos:
